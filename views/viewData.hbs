@@ -1,0 +1,24 @@
+<h2>{{title}}</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Movie ID</th>
+      <th>Title</th>
+      <th>Box Office</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each movies}}
+      {{#if (hasWebsite this.Website)}}
+        <tr>
+          <td>{{this.Movie_ID}}</td>
+          <td>{{this.Title}}</td>
+          <td>{{this.BoxOffice}}</td>
+          <td>{{this.Website}}</td>
+        </tr>
+      {{/if}}
+    {{/each}}
+  </tbody>
+</table>

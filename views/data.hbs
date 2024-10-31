@@ -1,0 +1,24 @@
+<h2>{{title}}</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Movie ID</th>
+      <th>Title</th>
+      <th>Box Office</th>
+      <th>Website</th>
+      <th>Poster</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each movies}}
+      <tr style="{{#unless (highlightNoWebsite this.Website)}}background-color: #cc4545;{{/unless}}">
+        <td>{{this.Movie_ID}}</td>
+        <td>{{this.Title}}</td>
+        <td>{{this.BoxOffice}}</td>
+        <td>{{this.Website}}</td>
+        <td><img src="{{this.Poster}}" alt="" /></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
